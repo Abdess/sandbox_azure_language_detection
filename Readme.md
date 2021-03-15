@@ -20,7 +20,7 @@ Le script permet de tester le service de traduction et de détection de la langu
 
 Veuillez lancer le notebook avec la commande suivante
 
-    jupyter nbconvert P1_02_Présentation.ipynb --to slides --post serve
+    jupyter nbconvert P1_02_Présentation_alt.ipynb --to slides --post serve
 
 Ou intégrez le support du mode slideshow avec la commande
 
