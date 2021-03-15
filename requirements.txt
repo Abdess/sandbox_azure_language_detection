@@ -1,0 +1,6 @@
+jupyter
+RISE
+pandas
+python-dotenv
+azure-cognitiveservices-language-textanalytics
+seaborn
