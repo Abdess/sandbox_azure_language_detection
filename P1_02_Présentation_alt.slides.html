@@ -15273,14 +15273,14 @@ div.jp-OutputPrompt {
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
-<span class="c1">#Set general plot properties</span>
+<span class="c1"># Définition des propriétés générales du tracé</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">({</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">10</span><span class="p">)})</span>
 
-<span class="c1">#Plot 1 - background - &quot;total&quot; (top) series</span>
+<span class="c1"># Plot 1</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sample_merge</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sample_merge</span><span class="p">[</span><span class="s2">&quot;nb_of_sample&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
 
-<span class="c1">#Plot 2 - overlay - &quot;bottom&quot; series</span>
+<span class="c1"># Plot 2</span>
 <span class="n">bottom_plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">sample_merge</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sample_merge</span><span class="p">[</span><span class="s2">&quot;is_correct_sum&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;#0000A3&quot;</span><span class="p">)</span>
 
 
@@ -15289,12 +15289,12 @@ div.jp-OutputPrompt {
 <span class="n">l</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">bottombar</span><span class="p">,</span> <span class="n">topbar</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Succès&#39;</span><span class="p">,</span> <span class="s1">&#39;Échec&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncol</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="mi">27</span><span class="p">})</span>
 <span class="n">l</span><span class="o">.</span><span class="n">draw_frame</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1">#Optional code - Make plot look nicer</span>
+<span class="c1"># Code optionnel - Rendre le tracé plus agréable à regarder</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">bottom_plot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d’échantillons&quot;</span><span class="p">)</span>
 <span class="n">bottom_plot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Langue&quot;</span><span class="p">)</span>
 
-<span class="c1">#Set fonts to consistent 16pt size</span>
+<span class="c1"># Taille de la police</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">([</span><span class="n">bottom_plot</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">bottom_plot</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="p">]</span> <span class="o">+</span>
              <span class="n">bottom_plot</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()</span> <span class="o">+</span> <span class="n">bottom_plot</span><span class="o">.</span><span class="n">get_yticklabels</span><span class="p">()):</span>
     <span class="n">item</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span>
